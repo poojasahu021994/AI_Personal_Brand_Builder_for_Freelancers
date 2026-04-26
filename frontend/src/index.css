@@ -1,0 +1,12 @@
+@import "tailwindcss";
+.input-style {
+  @apply w-full border border-gray-300 rounded-xl p-3 mb-3 focus:outline-none focus:ring-2 focus:ring-indigo-400 transition;
+}
+
+.section-title {
+  @apply font-semibold text-indigo-600 mb-1 uppercase tracking-wide text-xs;
+}
+
+.skill-badge {
+  @apply bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full text-xs font-medium;
+}
