@@ -12,7 +12,7 @@ const Sidebar = () => {
         <Link to="/dashboard" className="hover:bg-indigo-500 p-2 rounded">Dashboard</Link>
         <Link to="/PortfolioBuilder" className="hover:bg-indigo-500 p-2 rounded">PortfolioBuilder</Link>
         <Link to="/ai" className="hover:bg-indigo-500 p-2 rounded">AI Writer</Link>
-        <Link to="/porjects" className="hover:bg-indigo-500 p-2 rounded">Porjects</Link>
+        <Link to="/projects" className="hover:bg-indigo-500 p-2 rounded">Projects</Link>
         <Link to="/resumeBuilder" className="hover:bg-indigo-500 p-2 rounded">Generate Resume</Link>
 
       </nav>

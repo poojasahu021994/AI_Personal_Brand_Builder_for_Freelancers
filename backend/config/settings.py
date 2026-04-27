@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'users',
     'ai_tools',
     'portfolio',
+    'projects',
 ]
 
 MIDDLEWARE = [
