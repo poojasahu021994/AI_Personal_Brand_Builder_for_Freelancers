@@ -63,9 +63,9 @@ def generate_portfolio(request):
             parsed = json.loads(text)
         except Exception as e:
             print("JSON ERROR:", e)
-            parsed = fallback  # 🔥 fallback use
+            parsed = fallback 
 
-        # 🔥 structure fix
+       
         if not isinstance(parsed.get("skills"), list):
             parsed["skills"] = fallback["skills"]
 
@@ -77,5 +77,5 @@ def generate_portfolio(request):
     except Exception as e:
         print("SERVER ERROR:", e)
 
-        # 🔥 NEVER send error only
+      
         return Response({"portfolio": fallback})

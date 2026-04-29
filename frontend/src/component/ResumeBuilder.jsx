@@ -52,7 +52,6 @@ const ResumeBuilder = () => {
     return sections;
   };
 
-  // 🔹 API call
   const handleGenerate = async () => {
     try {
       const res = await axios.post(
@@ -61,6 +60,7 @@ const ResumeBuilder = () => {
       );
  
       console.log("RAW RESPONSE:", res.data.resume);
+      console.log(res.data);
       setResume(res.data);
 
     } catch (error) {

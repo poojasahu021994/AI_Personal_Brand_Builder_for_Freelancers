@@ -51,10 +51,18 @@ def generate_resume(request):
             contents=prompt
         )
 
-        return Response({"resume": response.text})
+        text = response.text if response.text else ""
+
+        return Response({
+                            "success": True,
+                            "resume": text
+                        })
 
     except Exception as e:
-        return Response({"error": str(e)})
+                        return Response({
+                            "success": False,
+                            "error": str(e)
+                        })
 
 
       

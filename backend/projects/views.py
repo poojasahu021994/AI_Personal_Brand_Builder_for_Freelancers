@@ -1,4 +1,3 @@
-from django.shortcuts import render
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from .models import Project
@@ -18,3 +17,9 @@ def projects_api(request):
             serializer.save()
             return Response(serializer.data)
         return Response(serializer.errors, status=400)
+    
+@api_view(['GET'])
+def project_detail(request, pk):
+    project = Project.objects.get(id=pk)
+    serializer = ProjectSerializer(project)
+    return Response(serializer.data)    

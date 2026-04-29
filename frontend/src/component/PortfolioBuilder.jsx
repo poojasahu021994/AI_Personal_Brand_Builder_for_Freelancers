@@ -30,7 +30,7 @@ const PortfolioBuilder = () => {
       let data = res.data.portfolio;
       console.log("portfolio data", data)
 
-      // 🧠 safety fixes
+      //  safety fixes
       if (typeof data?.skills === "string") {
         data.skills = data.skills.split(",");
       }
