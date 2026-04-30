@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
-const API_URL = "http://127.0.0.1:8000/api/projects/";
+const API_URL = "https://poojacodes.pythonanywhere.com/api/projects/";
 
 const ProjectDetails = () => {
   const { id } = useParams();

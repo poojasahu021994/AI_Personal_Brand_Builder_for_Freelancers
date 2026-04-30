@@ -23,7 +23,7 @@ const PortfolioBuilder = () => {
   const handleGenerate = async () => {
     try {
       const res = await axios.post(
-        "http://127.0.0.1:8000/api/generate-portfolio/",
+        "https://poojacodes.pythonanywhere.com/api/generate-portfolio/",
         form
       );
 

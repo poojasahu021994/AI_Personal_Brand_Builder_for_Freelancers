@@ -13,7 +13,7 @@ export default function Login() {
   });
 
   const loginUser = async () => {
-    const res = await axios.post("http://127.0.0.1:8000/api/login/", form);
+    const res = await axios.post("https://poojacodes.pythonanywhere.com/api/login/", form);
 
     localStorage.setItem("token", res.data.access);
     localStorage.setItem("refresh", res.data.refresh);

@@ -55,7 +55,7 @@ const ResumeBuilder = () => {
   const handleGenerate = async () => {
     try {
       const res = await axios.post(
-        "http://127.0.0.1:8000/api/generate-resume/",
+        "https://poojacodes.pythonanywhere.com/api/generate-resume/",
         form
       );
  

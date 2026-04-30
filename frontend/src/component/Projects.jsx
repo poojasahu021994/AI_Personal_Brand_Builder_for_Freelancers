@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Layout from "./Layout";
 import { Link } from "react-router-dom";
 
-const API_URL = "http://127.0.0.1:8000/api/projects/";
+const API_URL = "https://poojacodes.pythonanywhere.com/api/projects/";
 
 const Projects = () => {
   const [form, setForm] = useState({

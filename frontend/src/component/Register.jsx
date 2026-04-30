@@ -10,7 +10,7 @@ password:""
 })
 
 const registerUser = async()=>{
-await axios.post("http://127.0.0.1:8000/api/register/",form)
+await axios.post("https://poojacodes.pythonanywhere.com/api/register/",form)
 alert("Registered Successfully")
 }
 

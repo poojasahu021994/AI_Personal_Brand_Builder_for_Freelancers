@@ -69,7 +69,7 @@ const LandingPage = () => {
   // FETCH ADMIN ADDED PROJECTS
   const fetchProjects = async () => {
     try {
-      const res = await fetch("http://127.0.0.1:8000/api/projects/");
+      const res = await fetch("https://poojacodes.pythonanywhere.com/api/projects/");
       const data = await res.json();
 
       // only first 2 cards show on landing page
