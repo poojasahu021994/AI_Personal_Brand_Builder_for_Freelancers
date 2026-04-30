@@ -30,7 +30,8 @@ const ResumeBuilder = () => {
         "https://poojacodes.pythonanywhere.com/api/generate-resume/",
         form
       );
-
+      console.log("RAW RESPONSE:", res.data.resume);
+      console.log(res.data);
       setResume(res.data);
     } catch (error) {
       console.error(error);
