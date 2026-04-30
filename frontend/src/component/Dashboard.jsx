@@ -39,6 +39,7 @@ const Dashboard = () => {
   };
 
   const totalProjects = projects.length;
+  console.log("totalProjects", totalProjects)
   const portfolioScore = totalProjects > 0 ? 85 : 70;
   const clientRequests = 12;
 
