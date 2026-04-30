@@ -23,3 +23,5 @@ def project_detail(request, pk):
     project = Project.objects.get(id=pk)
     serializer = ProjectSerializer(project)
     return Response(serializer.data)    
+
+ 
