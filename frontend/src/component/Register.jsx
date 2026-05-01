@@ -12,9 +12,19 @@ export default function Register() {
     })
     const navigate = useNavigate()
     const registerUser = async () => {
-        await axios.post("https://poojacodes.pythonanywhere.com/api/register/", form)
-        alert("Registered Successfully")
-        navigate("/")
+    try {
+        const res = await axios.post(
+            "https://poojacodes.pythonanywhere.com/api/register/",
+            form
+        );
+
+        alert("Registered Successfully");
+        navigate("/");
+
+    } catch (error) {
+        console.log("ERROR:", error.response.data);
+        alert(JSON.stringify(error.response.data));
+    }
     }
 
     return (
