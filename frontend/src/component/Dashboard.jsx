@@ -82,7 +82,7 @@ const Dashboard = () => {
             </div>
 
             <p className="text-4xl font-bold text-green-600 mt-4">
-              {loading ? "..." : totalProjects}
+              {totalProjects}
             </p>
 
             <p className="text-sm text-gray-500 mt-2">
@@ -120,7 +120,7 @@ const Dashboard = () => {
             <p className="text-gray-500">Loading...</p>
           ) : projects.length > 0 ? (
             <div className="grid md:grid-cols-2 gap-4">
-              {projects?.map((project, index) => (
+              {projects.map((project, index) => (
                 <div
                   key={index}
                   className="p-4 rounded-xl border border-gray-200 hover:shadow-md transition"
