@@ -39,7 +39,7 @@ const ResumeBuilder = () => {
     }
   };
 
-  // ✅ PDF Download Function
+  // PDF Download Function
   const handleDownload = () => {
     const element = resumeRef.current;
 
