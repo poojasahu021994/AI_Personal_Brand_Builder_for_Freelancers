@@ -19,7 +19,7 @@ export default function Register() {
         );
 
         alert("Registered Successfully");
-        navigate("/");
+        navigate("/login");
 
     } catch (error) {
         console.log("ERROR:", error.response.data);
