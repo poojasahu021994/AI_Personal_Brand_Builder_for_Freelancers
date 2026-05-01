@@ -56,7 +56,7 @@ const LandingPage = () => {
   // CHECK LOGIN FUNCTION
   // ===============================
   const handleProtectedRoute = () => {
-    const token = localStorage.getItem("access"); // JWT token
+    const token = localStorage.getItem("access"); 
 
     if (token) {
       navigate("/dashboard"); // login hai to dashboard
@@ -73,7 +73,7 @@ const LandingPage = () => {
       const data = await res.json();
 
       // only first 2 cards show on landing page
-      setProjects(data.slice(0, 2));
+      setProjects(data);
     } catch (error) {
       console.log(error);
     }

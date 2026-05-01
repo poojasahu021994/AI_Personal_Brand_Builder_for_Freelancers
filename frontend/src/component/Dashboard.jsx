@@ -19,22 +19,13 @@ const Dashboard = () => {
 
   const fetchProjects = async () => {
     try {
-      const token = localStorage.getItem("access");
+      const res = await fetch("https://poojacodes.pythonanywhere.com/api/projects/");
+      const data = await res.json();
 
-      const res = await axios.get(
-        "https://poojacodes.pythonanywhere.com/api/projects/",
-        {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        }
-      );
-
-      setProjects(res.data);
+      // only first 2 cards show on landing page
+      setProjects(data);
     } catch (error) {
-      console.log("Error fetching projects:", error);
-    } finally {
-      setLoading(false);
+      console.log(error);
     }
   };
 
@@ -129,7 +120,7 @@ const Dashboard = () => {
             <p className="text-gray-500">Loading...</p>
           ) : projects.length > 0 ? (
             <div className="grid md:grid-cols-2 gap-4">
-              {projects.map((project, index) => (
+              {projects?.map((project, index) => (
                 <div
                   key={index}
                   className="p-4 rounded-xl border border-gray-200 hover:shadow-md transition"
